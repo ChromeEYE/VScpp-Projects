@@ -55,7 +55,7 @@ int main()
 			switch (labyrinth[i][j])
 			{
 			case 0:
-				printf("　");
+				std::cout << "　";
 				break;
 			case 1:
 				if (i != 0)  u = (labyrinth[i - 1][j] == '1');
@@ -63,26 +63,26 @@ int main()
 				if (i != 0)  l = (labyrinth[i][j - 1] == '1');
 				if (i != 35 - 1)  r = (labyrinth[i][j + 1] == '1');
 
-				if (u && d && l &&r)  printf("┼");
-				else if (!u && d && l && r) printf("┬");
-				else if (u && !d && l && r) printf("┴");
-				else if (u && d && !l && r) printf("├");
-				else if (u && d && l && !r) printf("┤");
-				else if (!u && !d && l && r) printf("─");
-				else if (!u && d && !l && r) printf("┌");
-				else if (!u && d && l && !r) printf("┐");
-				else if (u && !d && !l && r) printf("└");
-				else if (u && !d && l && !r) printf("┘");
-				else if (u && d && !l && !r) printf("│");
+				if (u && d && l &&r)  std::cout << "┼";
+				else if (!u && d && l && r) std::cout << "┬";
+				else if (u && !d && l && r) std::cout << "┴";
+				else if (u && d && !l && r) std::cout << "├";
+				else if (u && d && l && !r) std::cout << "┤";
+				else if (!u && !d && l && r) std::cout << "─";
+				else if (!u && d && !l && r) std::cout << "┌";
+				else if (!u && d && l && !r) std::cout << "┐";
+				else if (u && !d && !l && r) std::cout << "└";
+				else if (u && !d && l && !r) std::cout << "┘";
+				else if (u && d && !l && !r) std::cout << "│";
 			case 2:
-				printf("○");
+				std::cout << "○";
 				break;
 			case 3:
-				printf("×");
+				std::cout << "×";
 				break;
 			}
 		}
-		printf("\n");
+		std::cout << "\n";
 	}
 
     return 0;
