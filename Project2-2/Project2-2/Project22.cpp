@@ -54,10 +54,11 @@ int main()
 		{
 			switch (labyrinth[i][j])
 			{
-			case 0:
+			case '0':
 				std::cout << "　";
+
 				break;
-			case 1:
+			case '1':
 				if (i != 0)  u = (labyrinth[i - 1][j] == '1');
 				if (i != 15 - 1)  d = (labyrinth[i + 1][j] == '1');
 				if (i != 0)  l = (labyrinth[i][j - 1] == '1');
@@ -74,11 +75,15 @@ int main()
 				else if (u && !d && !l && r) std::cout << "└";
 				else if (u && !d && l && !r) std::cout << "┘";
 				else if (u && d && !l && !r) std::cout << "│";
-			case 2:
-				std::cout << "○";
+				
 				break;
-			case 3:
+			case '2':
+				std::cout << "○";
+
+				break;
+			case '3':
 				std::cout << "×";
+
 				break;
 			}
 		}
